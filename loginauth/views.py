@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .forms import CreateUserForm, ProfileForm
 
 # Create your views here.
 
@@ -29,7 +30,21 @@ def login_user(request):
     return render(request, 'loginauth/login_page.html')
 
 def register_user(request):
-    return render(request, 'loginauth/register_page.html')
+    form = CreateUserForm()
+
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'Account is created.')
+            return redirect('login')
+        else:
+            context = {'form': form}
+            messages.info(request, 'Invalid credentials')
+            return render(request, 'loginauth/register_page.html', context)
+
+    context = {'form': form}
+    return render(request, 'loginauth/register_page.html', context)
 
 def logout_user(request):
     logout(request)
