@@ -14,7 +14,7 @@ class Profile(models.Model):
 
     desc = models.CharField(default = desc_text, max_length=200, null=True)
 
-    profile_img =  models.ImageField(default = 'images/default.jpg', upload_to = 'images', null = True, blank = True)
+    profile_img =  models.ImageField(default = 'media/default.jpg', upload_to = 'media', null = True, blank = True)
 
     def __str__(self):
         return f"{self.user.username}'s profile"
