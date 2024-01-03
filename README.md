@@ -27,22 +27,22 @@ This is a part of Cuvette assignment in which I had to create a simple Django we
 
 ## 📸Screenshots
 
->Home Page Redirect
+>Home Page Redirect <br>
 ![home-page-redirect](https://i.ibb.co/2ySFHcb/home-page-redirect.png)
 
->Login Page
+>Login Page <br>
 ![login-page](https://i.ibb.co/2MfkXZf/login.png)
 
->Signup Page
+>Signup Page <br>
 ![signup-page](https://i.ibb.co/Jm0cdd1/signup.png)
 
->Logout Page
+>Logout Page <br>
 ![logout-page](https://i.ibb.co/YpLL6wx/logout.png)
 
->Edit Profile Page
+>Edit Profile Page <br>
 ![edit-profile](https://i.ibb.co/YcTgLFN/profile-edit.png)
 
->Profile Page
+>Profile Page <br>
 ![profile](https://i.ibb.co/0f66YHQ/profile.png)
 
 
